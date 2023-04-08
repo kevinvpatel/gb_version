@@ -1,0 +1,141 @@
+name: gb_version_flutter
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+
+#  internet check
+  internet_connection_checker: ^1.0.0+1
+
+
+#  flutter_svg: ^2.0.2
+  flutter_svg_provider: ^1.0.3
+
+  responsive_sizer: ^3.1.1
+
+#  Advertise
+  google_mobile_ads: ^2.3.0
+  facebook_audience_network: ^1.0.1
+
+#  firebase
+  firebase_core: ^2.4.1
+  firebase_remote_config: ^3.0.9
+
+#  url open
+  url_launcher: ^6.1.10
+
+#  toast message
+  fluttertoast: ^8.1.2
+
+#  Generate web view
+  flutter_inappwebview: ^5.7.2+3
+
+#  Launch another app
+  external_app_launcher: ^3.1.0
+
+#  country picker
+  intl_phone_field: ^3.1.0
+
+#  whatsapp sticker add
+  whatsapp_stickers_plus: ^1.0.0
+
+#  detect mobile shake
+  shake: ^2.2.0
+
+#  local data manage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+#  create chat bubble
+  flutter_chat_bubble: ^2.0.2
+
+#  share intent
+  share_plus: ^6.3.1
+
+#  qr code scan
+  qr_code_scanner: ^1.0.1
+#  generate qr code
+  qr_flutter: ^4.0.0
+
+#  open setting
+  open_settings: ^2.0.2
+
+#  insta link
+  flutter_insta: ^1.0.1
+
+#  Whatsapp story path
+  saf: ^1.0.3+4
+  permission_handler: ^10.2.0
+  video_thumbnail: ^0.5.3
+
+#  open file
+  open_file:
+
+#  spring animation
+  spring: ^2.0.2
+
+#  play video
+  video_player: ^2.6.0
+
+#  image picker
+  image_picker: ^0.8.7+1
+
+#  take screenshot
+  screenshot: ^1.3.0
+
+##  facebook link
+#  facebook_video_download: ^0.0.4
+
+#  page indicator
+  smooth_page_indicator: ^1.0.1
+
+#  open playstore
+  launch_review: ^3.0.1
+
+
+  dio: ^5.1.0
+  path_provider: ^2.0.14
+
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/icon/
+    - assets/logo/
+    - assets/res/
+    - assets/home screen-images/
+    - assets/stickers/
+    - assets/stylish_fonts/
+    - assets/emoticons/
+    - assets/happy 1.png
+    - assets/facebook info images/
+    - assets/instagram info images/
+    - assets/text-to-emoji/
+
+  fonts:
+    - family: Laila
+      fonts:
+        - asset: fonts/Laila-Light.ttf
+          weight: 300
+        - asset: fonts/Laila-Regular.ttf
+          weight: 400
+        - asset: fonts/Laila-Medium.ttf
+          weight: 500
+        - asset: fonts/Laila-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Laila-Bold.ttf
+          weight: 700
+
+  uses-material-design: true
+
