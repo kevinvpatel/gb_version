@@ -75,7 +75,7 @@ class VideoDownloaderScreenView extends GetView<VideoDownloaderScreenController>
                           colors: [Color.fromRGBO(148, 195, 255, 0), Color.fromRGBO(227, 239, 255, 1)]
                       ),
                       onTap: () {
-                        Get.to(FacebookScreenView());
+                        Get.to(const FacebookScreenView());
                         adService.checkCounterAd();
                       }
                   ),
@@ -97,7 +97,7 @@ class VideoDownloaderScreenView extends GetView<VideoDownloaderScreenController>
                           colors: [Color.fromRGBO(255, 255, 255, 1), Color.fromRGBO(255, 255, 255, 1), Color.fromRGBO(252, 154, 137, 1)]
                       ),
                       onTap: () {
-                        Get.to(InstagramScreenView());
+                        Get.to(const InstagramScreenView());
                         adService.checkCounterAd();
                       }
                   ),
@@ -119,11 +119,11 @@ class VideoDownloaderScreenView extends GetView<VideoDownloaderScreenController>
                           colors: [Color.fromRGBO(255, 255, 255, 1), Color.fromRGBO(133, 207, 124, 1)]
                       ),
                       onTap: () {
-                        Get.to(WhatsappScreenView());
+                        Get.to(const WhatsappScreenView());
                         adService.checkCounterAd();
                       }
                   ),
-                  Spacer(),
+                  const Spacer(),
                   trendingToolsScreenController.thinTile(
                       tileHeight: 30.sp,
                       tileWidth: width * 0.6,
@@ -132,7 +132,7 @@ class VideoDownloaderScreenView extends GetView<VideoDownloaderScreenController>
                       imagePadding: 12.5.sp,
                       title: 'My Download',
                       onTap: () {
-                        Get.to(MyDownloadScreenView());
+                        Get.to(const MyDownloadScreenView());
                         adService.checkCounterAd();
                       }
                   ),

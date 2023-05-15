@@ -23,7 +23,7 @@ class FakeStoryScreenController extends GetxController {
       children: [
         SizedBox(width: 18.sp),
         Text('$title :', style: TextStyle(fontSize: 16.5.sp, fontWeight: FontWeight.w500),),
-        Spacer(),
+        const Spacer(),
         SizedBox(
           height: 26.sp,
           width: width * 0.55,

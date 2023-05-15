@@ -1,4 +1,3 @@
-import 'package:gb_version_flutter/app/modules/home_screen/views/home_screen_view.dart';
 import 'package:gb_version_flutter/app/modules/onboarding_screen/views/onboarding_screen_view.dart';
 import 'package:get/get.dart';
 
@@ -9,8 +8,8 @@ class SplashScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    Future.delayed(Duration(milliseconds: 1500), () {
-      Get.to(OnboardingScreenView());
+    Future.delayed(const Duration(milliseconds: 1500), () {
+      Get.to(const OnboardingScreenView());
       // Get.to(HomeScreenView());
     });
   }

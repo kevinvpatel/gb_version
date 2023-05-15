@@ -21,7 +21,7 @@ class MyDownloadScreenController extends GetxController {
           List<FileSystemEntity> listFiles = snapshot.data!;
           return ListView.builder(
               padding: EdgeInsets.zero,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               itemCount: listFiles.length,
               itemBuilder: (context, index) {
                 return InkWell(

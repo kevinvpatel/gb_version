@@ -68,7 +68,7 @@ class HomeScreenController extends GetxController {
                     end: Alignment.centerLeft,
                     colors: gradientColorsCircle
                 ),
-                boxShadow: [BoxShadow(color: Colors.black26, offset: Offset(-1, 0), blurRadius: 4)],
+                boxShadow: const [BoxShadow(color: Colors.black26, offset: Offset(-1, 0), blurRadius: 4)],
                 borderRadius: BorderRadius.circular(100.sp),
               ),
               padding: EdgeInsets.all(10.sp),
@@ -90,7 +90,7 @@ class HomeScreenController extends GetxController {
                     end: Alignment.centerRight,
                     colors: gradientColorsCircle
                 ),
-                boxShadow: [BoxShadow(color: Colors.black26, offset: Offset(0, -1), blurRadius: 4)],
+                boxShadow: const [BoxShadow(color: Colors.black26, offset: Offset(0, -1), blurRadius: 4)],
                 borderRadius: BorderRadius.circular(100.sp),
               ),
               padding: EdgeInsets.all(10.sp),

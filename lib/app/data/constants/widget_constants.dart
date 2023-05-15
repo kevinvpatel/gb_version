@@ -43,7 +43,7 @@ abstract class ConstantWidgets {
     required double width,
     required Widget child
   }) {
-    return Container(
+    return SizedBox(
       height: height,
       width: width,
       child: Stack(

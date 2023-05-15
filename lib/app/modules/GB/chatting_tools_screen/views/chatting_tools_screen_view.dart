@@ -29,7 +29,7 @@ class ChattingToolsScreenView extends GetView<ChattingToolsScreenController> {
 
     return WillPopScope(
     onWillPop: () {
-      Get.off(GbWhatsappScreenView());
+      Get.off(const GbWhatsappScreenView());
       adService.checkBackCounterAd();
       return Future.value(true);
     },
@@ -45,123 +45,121 @@ class ChattingToolsScreenView extends GetView<ChattingToolsScreenController> {
               },
               child: Image.asset(ConstantsImage.back_icon, height: 26.sp)
           ),
-          child: Container(
-            child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              child: Column(
-                children: [
-                  SizedBox(height: 15.sp),
-                  Image.asset(ConstantsImage.screen5_logo, height: 55.sp),
-                  Text('Chatting WhatsApp Tools', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18.5.sp), textAlign: TextAlign.center),
-                  SizedBox(height: 15.sp),
-                  Text('This Features Acts As a Perfect Tool For \n WhatsApp', style: TextStyle(fontWeight: FontWeight.w500), textAlign: TextAlign.center),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.1,
-                      imagePath: ConstantsImage.whatsapp_chat_icon,
-                      imagePadding: 13.sp,
-                      title: 'WhatsApp Chat',
-                      onTap: () {
-                        Get.to(DirectChatScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.22,
-                      imagePath: ConstantsImage.quick_chat_icon,
-                      imagePadding: 13.sp,
-                      title: 'Quick Chat',
-                      onTap: () {
-                        Get.to(QuickChatScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.1,
-                      imagePath: ConstantsImage.sticker_icon,
-                      imagePadding: 13.sp,
-                      title: 'Stickers',
-                      onTap: () {
-                        Get.to(StickersScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.22,
-                      imagePath: ConstantsImage.blank_message_icon,
-                      imagePadding: 13.sp,
-                      title: 'Blank Message',
-                      onTap: () {
-                        Get.to(BlankMessageScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.1,
-                      imagePath: ConstantsImage.text_repeater_icon,
-                      imagePadding: 13.sp,
-                      title: 'Text Repeater',
-                      onTap: () {
-                        Get.to(TextRepeaterScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.22,
-                      imagePath: ConstantsImage.font_style_icon,
-                      imagePadding: 13.sp,
-                      title: 'Font Style',
-                      onTap: () {
-                        Get.to(StylishFontScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.1,
-                      imagePath: ConstantsImage.text_to_emoji_icon,
-                      imagePadding: 13.sp,
-                      title: 'Text To Emoji',
-                      onTap: () {
-                        Get.to(TextToEmojiScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                  trendingToolsScreenController.thinTile(
-                      tileHeight: 30.sp,
-                      tileWidth: width * 0.56,
-                      backSpace: width * 0.22,
-                      imagePath: ConstantsImage.emoticons_icon,
-                      imagePadding: 13.sp,
-                      title: 'Emoticons',
-                      onTap: () {
-                        Get.to(EmoticonsScreenView());
-                        adService.checkCounterAd();
-                      }
-                  ),
-                  SizedBox(height: 18.sp),
-                ],
-              ),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                SizedBox(height: 15.sp),
+                Image.asset(ConstantsImage.screen5_logo, height: 55.sp),
+                Text('Chatting WhatsApp Tools', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18.5.sp), textAlign: TextAlign.center),
+                SizedBox(height: 15.sp),
+                const Text('This Features Acts As a Perfect Tool For \n WhatsApp', style: TextStyle(fontWeight: FontWeight.w500), textAlign: TextAlign.center),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.1,
+                    imagePath: ConstantsImage.whatsapp_chat_icon,
+                    imagePadding: 13.sp,
+                    title: 'WhatsApp Chat',
+                    onTap: () {
+                      Get.to(const DirectChatScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.22,
+                    imagePath: ConstantsImage.quick_chat_icon,
+                    imagePadding: 13.sp,
+                    title: 'Quick Chat',
+                    onTap: () {
+                      Get.to(const QuickChatScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.1,
+                    imagePath: ConstantsImage.sticker_icon,
+                    imagePadding: 13.sp,
+                    title: 'Stickers',
+                    onTap: () {
+                      Get.to(const StickersScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.22,
+                    imagePath: ConstantsImage.blank_message_icon,
+                    imagePadding: 13.sp,
+                    title: 'Blank Message',
+                    onTap: () {
+                      Get.to(const BlankMessageScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.1,
+                    imagePath: ConstantsImage.text_repeater_icon,
+                    imagePadding: 13.sp,
+                    title: 'Text Repeater',
+                    onTap: () {
+                      Get.to(const TextRepeaterScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.22,
+                    imagePath: ConstantsImage.font_style_icon,
+                    imagePadding: 13.sp,
+                    title: 'Font Style',
+                    onTap: () {
+                      Get.to(const StylishFontScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.1,
+                    imagePath: ConstantsImage.text_to_emoji_icon,
+                    imagePadding: 13.sp,
+                    title: 'Text To Emoji',
+                    onTap: () {
+                      Get.to(const TextToEmojiScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+                trendingToolsScreenController.thinTile(
+                    tileHeight: 30.sp,
+                    tileWidth: width * 0.56,
+                    backSpace: width * 0.22,
+                    imagePath: ConstantsImage.emoticons_icon,
+                    imagePadding: 13.sp,
+                    title: 'Emoticons',
+                    onTap: () {
+                      Get.to(const EmoticonsScreenView());
+                      adService.checkCounterAd();
+                    }
+                ),
+                SizedBox(height: 18.sp),
+              ],
             ),
           )
       ),

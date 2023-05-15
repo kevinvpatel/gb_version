@@ -19,9 +19,9 @@ class AdService {
   static RxBool isBannerAdLoaded = false.obs;
 
   static Widget bannerAd({required double width}) {
-    print('Get.previousRoute -> ${Get.previousRoute}');
-    print('Get.currentRoute -> ${Get.currentRoute}');
-    print('data -> ${configData.value[Get.currentRoute]['banner-type']}');
+    debugPrint('Get.previousRoute -> ${Get.previousRoute}');
+    debugPrint('Get.currentRoute -> ${Get.currentRoute}');
+    debugPrint('data -> ${configData.value[Get.currentRoute]['banner-type']}');
 
     if(configData.value[Get.currentRoute]['banner-type'] == 'admob') {
       bannerAdAdMob = BannerAd(
@@ -39,13 +39,13 @@ class AdService {
               // ad.dispose();
             },
           ),
-          request: AdRequest()
+          request: const AdRequest()
       );
       bannerAdAdMob?.load();
     }
 
     return configData.value[Get.currentRoute]['banner-type'] == 'admob' ?
-    Container(
+    SizedBox(
       height: 50,
       width: width * 0.8,
       child: AdWidget(ad: bannerAdAdMob!),
@@ -133,7 +133,7 @@ class AdService {
             Fluttertoast.showToast(msg: 'Could not launch url: ${configData.value[Get.currentRoute]['link']}');
           }
         },
-        child: Container(
+        child: SizedBox(
           // height: 300,
           width: smallAd ? width * 0.6 : width,
           child: ClipRRect(
@@ -159,7 +159,7 @@ class AdService {
           request: const AdRequest(),
           adLoadCallback: InterstitialAdLoadCallback(onAdLoaded: (ad) {
             interstitialAdMob = ad;
-            print('interstitialAd LOAD 33 -> ${adId}');
+            print('interstitialAd LOAD 33 -> $adId');
             ad.show();
             if (interstitialAdMob == null) {
               print('attempt to show InterstitialAd before loaded');
@@ -197,7 +197,7 @@ class AdService {
   checkCounterAd() {
     print('counterr -> $counterInterstitalAd');
     print('counterr@@ -> ${configData.value['counter']}');
-    Future.delayed(Duration(milliseconds: 1200), () {
+    Future.delayed(const Duration(milliseconds: 1200), () {
       if(counterInterstitalAd.value == configData.value['counter']) {
         counterInterstitalAd.value = 1;
         Get.dialog(
@@ -225,7 +225,7 @@ class AdService {
             interstitialAdMob = null;
             interstitialAd(
                 adId: configData.value['interstitial-admob'],
-                onAdFailedToLoad: (LoadAdError) {
+                onAdFailedToLoad: (loadAdError) {
                   counterInterstitalAd.value = 1;
                   Future.delayed(const Duration(milliseconds: 1000), () => Get.back());
                 }
@@ -241,7 +241,7 @@ class AdService {
   checkBackCounterAd() {
     print('backCounter -> $backCounterInterstitalAd');
     print('backCounter@@ -> ${configData.value['back_counter']}');
-    Future.delayed(Duration(milliseconds: 1200), () {
+    Future.delayed(const Duration(milliseconds: 1200), () {
       if(backCounterInterstitalAd.value == configData.value['back_counter']) {
         backCounterInterstitalAd.value = 1;
         Get.dialog(
@@ -272,7 +272,7 @@ class AdService {
                 interstitialAd(
                   isBack: Get.currentRoute == '/HomeScreenView' ? false : true,
                   adId: configData.value['interstitial-admob'],
-                  onAdFailedToLoad: (LoadAdError ) {
+                  onAdFailedToLoad: (loadAdError ) {
                     backCounterInterstitalAd.value = 1;
                     Future.delayed(const Duration(milliseconds: 1000), () => Get.back());
                   },

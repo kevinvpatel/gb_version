@@ -43,7 +43,7 @@ class Screens {
       height: height,
       child: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           Image.asset(ConstantsImage.screen1_logo, width: width * 0.78),
           SizedBox(height: 28.sp),
           Text('You can easily share this app with your friends and family.'
@@ -54,7 +54,7 @@ class Screens {
           SizedBox(height: 30.sp),
           ConstantWidgets.button(
               onPressed: () {
-                pageController.nextPage(duration: Duration(milliseconds: 800), curve: Curves.easeOut);
+                pageController.nextPage(duration: const Duration(milliseconds: 800), curve: Curves.easeOut);
                 adService.checkCounterAd();
               },
               child: Text('Start', style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600)),
@@ -123,7 +123,7 @@ class Screens {
         height: height,
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Image.asset(ConstantsImage.screen2_logo, width: width * 0.78),
             SizedBox(height: 28.sp),
             Text('Status Saver For GB What’s is here to help you download or share friend’s statuses in just one click.'
@@ -132,7 +132,7 @@ class Screens {
               textAlign: TextAlign.center,
             ),
             // SizedBox(height: 36.sp),
-            Spacer(flex: 2),
+            const Spacer(flex: 2),
           ],
         ),
       ),
@@ -140,7 +140,7 @@ class Screens {
       floatingActionButton: ConstantWidgets.button(
           onPressed: () {
             print('Continue button');
-            pageController.nextPage(duration: Duration(milliseconds: 800), curve: Curves.easeOut);
+            pageController.nextPage(duration: const Duration(milliseconds: 800), curve: Curves.easeOut);
             adService.checkCounterAd();
           },
           child: Text('Continue', style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600)),
@@ -173,7 +173,7 @@ class Screens {
               child: bulletinText(lstText: [
                 'Text repeater: repeat text message.',
                 'Status Saver app.',
-                'Chat Messages Text style and fonts for GB What\’s.',
+                'Chat Messages Text style and fonts for GB What’s.',
                 'Funny and stylish Font.'
               ]),
             ),
@@ -185,7 +185,7 @@ class Screens {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: ConstantWidgets.button(
           onPressed: () {
-            Get.to(HomeScreenView());
+            Get.to(const HomeScreenView());
             adService.checkCounterAd();
           },
           child: Row(

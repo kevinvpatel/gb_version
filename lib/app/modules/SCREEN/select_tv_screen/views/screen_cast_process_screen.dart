@@ -19,35 +19,35 @@ class ScreenCastProcessScreenView extends GetView<SelectTvScreenController> {
 
     controller.isComplete.value = [false, false, false, false];
 
-    Future.delayed(Duration(milliseconds: 2000), () {
+    Future.delayed(const Duration(milliseconds: 2000), () {
       controller.springController.value[0].play();
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 2200), () {
+    Future.delayed(const Duration(milliseconds: 2200), () {
       controller.isComplete.value[0] = true;
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 4000), () {
+    Future.delayed(const Duration(milliseconds: 4000), () {
       controller.springController.value[1].play();
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 4200), () {
+    Future.delayed(const Duration(milliseconds: 4200), () {
       controller.isComplete.value[1] = true;
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 6000), () {
+    Future.delayed(const Duration(milliseconds: 6000), () {
       controller.springController.value[2].play();
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 6200), () {
+    Future.delayed(const Duration(milliseconds: 6200), () {
       controller.isComplete.value[2] = true;
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 8000), () {
+    Future.delayed(const Duration(milliseconds: 8000), () {
       controller.springController.value[3].play();
       controller.update();
     });
-    Future.delayed(Duration(milliseconds: 8200), () {
+    Future.delayed(const Duration(milliseconds: 8200), () {
       controller.isComplete.value[3] = true;
       controller.update();
     });
@@ -84,7 +84,7 @@ class ScreenCastProcessScreenView extends GetView<SelectTvScreenController> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   controller.progressHeading(index: 3),
                   SizedBox(height: 20.sp),
                   controller.progressLine(title: 'Scanning for TV\'s', index: 0),
@@ -94,9 +94,9 @@ class ScreenCastProcessScreenView extends GetView<SelectTvScreenController> {
                   controller.progressLine(title: 'Installing Drivers', index: 2),
                   SizedBox(height: 12.sp),
                   controller.progressLine(title: 'Connecting', index: 3),
-                  Spacer(),
+                  const Spacer(),
                   controller.nextButton(index: 3, adService: adService),
-                  Spacer(),
+                  const Spacer(),
                   ///Native Advertise
                   Container(
                     height: 50.sp,

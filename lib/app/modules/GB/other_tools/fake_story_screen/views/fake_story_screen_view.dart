@@ -38,7 +38,7 @@ class FakeStoryScreenView extends GetView<FakeStoryScreenController> {
                 },
                 child: Image.asset(ConstantsImage.back_icon, height: 26.sp)
             ),
-            child: Container(
+            child: SizedBox(
               height: height,
               width: width,
               child: Column(
@@ -81,7 +81,7 @@ class FakeStoryScreenView extends GetView<FakeStoryScreenController> {
                       ),
                       ConstantWidgets.button(
                           onPressed: () {
-                            Get.to(StoryViewScreenView());
+                            Get.to(const StoryViewScreenView());
                             adService.checkCounterAd();
                           },
                           child: Icon(Icons.play_circle_outline_outlined, color: Colors.white, size: 22.sp),
@@ -92,7 +92,7 @@ class FakeStoryScreenView extends GetView<FakeStoryScreenController> {
                     ],
                   ),
                   SizedBox(height: 20.sp),
-                  Container(
+                  SizedBox(
                     height: height * 0.22,
                     child: Column(
                       children: [
@@ -105,7 +105,7 @@ class FakeStoryScreenView extends GetView<FakeStoryScreenController> {
                     )
                   ),
                   // SizedBox(height: 15.sp),
-                  Spacer(),
+                  const Spacer(),
                   GetBuilder(
                     init: FakeStoryScreenController(),
                     builder: (ctrl) {
@@ -135,7 +135,7 @@ class FakeStoryScreenView extends GetView<FakeStoryScreenController> {
                       );
                     }
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             )

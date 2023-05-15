@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gb_version_flutter/app/data/constants/color_constants.dart';
-import 'package:gb_version_flutter/app/data/constants/image_constants.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -58,7 +57,7 @@ class GbWhatsappScreenController extends GetxController {
                     child: Image.asset(imagePath),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(title, style: TextStyle(color: Colors.white, fontSize: 16.sp, fontWeight: FontWeight.w500),),
                 SizedBox(width: 18.sp)
               ],

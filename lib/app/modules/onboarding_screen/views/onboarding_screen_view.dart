@@ -13,7 +13,7 @@ class OnboardingScreenView extends GetView<OnboardingScreenController> {
     return WillPopScope(
       onWillPop: () {
         controller.selectedPage.value--;
-        Screens.pageController.animateToPage(controller.selectedPage.value, duration: Duration(milliseconds: 500), curve: Curves.linearToEaseOut);
+        Screens.pageController.animateToPage(controller.selectedPage.value, duration: const Duration(milliseconds: 500), curve: Curves.linearToEaseOut);
         return Future.value(false);
       },
       child: Scaffold(

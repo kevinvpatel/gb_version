@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gb_version_flutter/app/data/constants/color_constants.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -56,9 +55,9 @@ class VideoDownloaderScreenController extends GetxController {
                     child: Image.asset(imagePath),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(title, style: TextStyle(color: Colors.white, fontSize: 18.sp, fontWeight: FontWeight.w600),),
-                Spacer(),
+                const Spacer(),
               ],
             ),
           ),

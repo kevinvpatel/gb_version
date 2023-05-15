@@ -45,20 +45,20 @@ class OpenStoryScreenView extends GetView<WhatsappScreenController> {
                 return Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: const AlignmentDirectional(0, 0),
                       child: Container(
                         height: height * 0.6,
                         width: width,
                         child: controller.videoPlayerController.value.isInitialized
                             ? VideoPlayer(controller.videoPlayerController)
-                            : Center(child: Text('Please Wait!!', style: TextStyle(color: Colors.white),)),
+                            : const Center(child: Text('Please Wait!!', style: TextStyle(color: Colors.white),)),
                       ),
                     ),
                     GetBuilder(
                       init: WhatsappScreenController(),
                       builder: (ctrl) {
                         if(controller.videoPlayerController.value.isPlaying) {
-                          return SizedBox.shrink();
+                          return const SizedBox.shrink();
                         } else {
                           return Center(
                             child: InkWell(

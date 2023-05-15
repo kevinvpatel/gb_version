@@ -27,17 +27,17 @@ class HomeScreenView extends GetView<HomeScreenController> {
       onWillPop: () {
         if(Get.currentRoute == '/HomeScreenView') {
           Get.dialog(AlertDialog(
-            contentPadding: EdgeInsets.only(top: 20),
-            content: Container(
+            contentPadding: const EdgeInsets.only(top: 20),
+            content: SizedBox(
               width: width * 0.8,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text('Alert', style: TextStyle(fontSize: 21.sp, fontWeight: FontWeight.w600, color: Colors.brown),),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Text('Do you want to exit the app?', style: TextStyle(fontSize: 17.sp, color: Colors.brown),),
-                  SizedBox(height: 25),
-                  Divider(height: 0,),
+                  const SizedBox(height: 25),
+                  const Divider(height: 0,),
                   SizedBox(
                     height: 45,
                     child: Row(
@@ -51,7 +51,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                             child: Text('Yes', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w600, color: ConstantsColor.themeColor),),
                           ),
                         ),
-                        VerticalDivider(width: 2),
+                        const VerticalDivider(width: 2),
                         InkWell(
                           onTap: () => Get.back(),
                           child: Container(
@@ -78,7 +78,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 22.sp),
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 children: [
                   controller.listTile(
@@ -89,7 +89,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     gradientColorsCircle: const [Color.fromRGBO(192, 92, 1, 1), Color.fromRGBO(255, 233, 211, 1)],
                     imagePath: ConstantsImage.home_image1,
                     onTap: () {
-                      Get.to(GbWhatsappScreenView());
+                      Get.to(const GbWhatsappScreenView());
                       adService.checkCounterAd();
                     }
                   ),
@@ -101,7 +101,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                       gradientColorsCircle: const [Color.fromRGBO(143, 0, 112, 1), Color.fromRGBO(255, 251, 254, 1)],
                       imagePath: ConstantsImage.home_image2,
                       onTap: () {
-                        Get.to(VideoDownloaderScreenView());
+                        Get.to(const VideoDownloaderScreenView());
                         adService.checkCounterAd();
                       }
                   ),
@@ -113,7 +113,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                       gradientColorsCircle: const [Color.fromRGBO(0, 45, 112, 1), Color.fromRGBO(255, 251, 254, 1)],
                       imagePath: ConstantsImage.home_image3,
                       onTap: () {
-                        Get.to(WhatsappScreenView());
+                        Get.to(const WhatsappScreenView());
                         adService.checkCounterAd();
                       }
                   ),
@@ -125,7 +125,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                       gradientColorsCircle: const [Color.fromRGBO(212, 0, 0, 1), Color.fromRGBO(255, 251, 254, 1)],
                       imagePath: ConstantsImage.home_image4,
                       onTap: () {
-                        Get.to(SelectTvScreenView());
+                        Get.to(const SelectTvScreenView());
                         adService.checkCounterAd();
                       }
                   ),

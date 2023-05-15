@@ -9,7 +9,7 @@ class StylishFontScreenController extends GetxController {
 
   // TextEditingController txtStylishText = TextEditingController();
   RxString txtStylishText = 'Stylish Font'.obs;
-  Rx<FontModel>? fontModel;
+    Rx<FontModel>? fontModel;
 
   Future<List<Fonts>?> loadFontsJson() async {
     fontModel = FontModel().obs;

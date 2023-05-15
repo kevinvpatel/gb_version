@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gb_version_flutter/app/data/constants/image_constants.dart';
 
 import 'package:get/get.dart';
@@ -14,7 +13,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
     SplashScreenController controller = Get.put(SplashScreenController());
 
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: width,
         child: Image.asset(ConstantsImage.splash_logo, fit: BoxFit.cover),
       ),

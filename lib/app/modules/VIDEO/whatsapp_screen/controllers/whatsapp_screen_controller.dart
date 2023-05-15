@@ -26,7 +26,7 @@ class WhatsappScreenController extends GetxController {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(),
+          const Spacer(),
           Obx(() => Text('Click on this button, \n \n choose path: /storage/emulated/0/Android/media/com.whatsapp/${isWhatsappBussiness.value == true ? 'Whatsapp Bussiness' : 'Whatsapp'}/Media/.Statuses  '
               '\n \n  & Sync your story \n ${isWhatsappBussiness.value == true ? 'Whatsapp Bussiness story' : 'Whatsapp story'}',
             style: TextStyle(fontSize: 16.sp, color: ConstantsColor.themeColor),
@@ -44,7 +44,7 @@ class WhatsappScreenController extends GetxController {
               width: width * 0.52,
               height: 27.sp
           ),
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
         ],
       ),
     );
@@ -91,7 +91,7 @@ class WhatsappScreenController extends GetxController {
   Widget storiesGrid({required List data}) {
     double spacing = 15.sp;
     return GridView.builder(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       padding: EdgeInsets.only(left: spacing, right: spacing, bottom: spacing),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, crossAxisSpacing: spacing, mainAxisSpacing: spacing, childAspectRatio: 1),
       itemCount: data.length,
@@ -172,7 +172,7 @@ class WhatsappScreenController extends GetxController {
             ),
           );
         } else {
-          return SizedBox.shrink();
+          return const SizedBox.shrink();
         }
       },
     );

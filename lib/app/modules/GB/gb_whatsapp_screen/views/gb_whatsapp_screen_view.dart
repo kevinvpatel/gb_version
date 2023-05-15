@@ -45,7 +45,7 @@ class GbWhatsappScreenView extends GetView<GbWhatsappScreenController> {
               // color: Colors.orange,
               margin: EdgeInsets.only(top: 30.sp, left: 15.sp, right: 15.sp, bottom: 20.sp),
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     controller.thickTile(
@@ -56,7 +56,7 @@ class GbWhatsappScreenView extends GetView<GbWhatsappScreenController> {
                         imagePadding: 10.sp,
                         title: 'Trending Tools',
                         onTap: () {
-                          Get.to(TrendingToolsScreenView());
+                          Get.to(const TrendingToolsScreenView());
                           adService.checkCounterAd();
                         }
                     ),
@@ -69,7 +69,7 @@ class GbWhatsappScreenView extends GetView<GbWhatsappScreenController> {
                         imagePadding: 14.5.sp,
                         title: 'Chatting Tools',
                         onTap: (){
-                          Get.to(ChattingToolsScreenView());
+                          Get.to(const ChattingToolsScreenView());
                           adService.checkCounterAd();
                         }
                     ),
@@ -82,7 +82,7 @@ class GbWhatsappScreenView extends GetView<GbWhatsappScreenController> {
                         imagePadding: 14.sp,
                         title: 'Scanner Tools',
                         onTap: (){
-                          Get.to(ScannerToolsScreenView());
+                          Get.to(const ScannerToolsScreenView());
                           adService.checkCounterAd();
                         }
                     ),
@@ -95,7 +95,7 @@ class GbWhatsappScreenView extends GetView<GbWhatsappScreenController> {
                         imagePadding: 14.sp,
                         title: 'Other Tools',
                         onTap: (){
-                          Get.to(OtherToolsScreenView());
+                          Get.to(const OtherToolsScreenView());
                           adService.checkCounterAd();
                         }
                     ),

@@ -60,7 +60,7 @@ class TvModelYearScreenView extends GetView<SelectTvScreenController> {
                         onSelectedItemChanged: (int index) {
                           print('controller.lstYear[index] -> ${controller.lstYear[index]}');
                         },
-                        children: List.generate(controller.lstYear.length, (index) => Text(controller.lstYear[index], style: TextStyle(color: Colors.black),))
+                        children: List.generate(controller.lstYear.length, (index) => Text(controller.lstYear[index], style: const TextStyle(color: Colors.black),))
                     ),
                   ),
                   SizedBox(height: 20.sp),
@@ -73,7 +73,7 @@ class TvModelYearScreenView extends GetView<SelectTvScreenController> {
                       width: width * 0.26,
                       height: 26.sp
                   ),
-                  Spacer(),
+                  const Spacer(),
                   ///Native Advertise
                   Container(
                     height: 55.sp,

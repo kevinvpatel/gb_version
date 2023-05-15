@@ -54,7 +54,7 @@ class FacebookInstagramInfoScreenView extends GetView<FacebookScreenController> 
       children: [
         Expanded(
           child: PageView.builder(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               controller: controller.pageController,
               itemCount: data.length,
               itemBuilder: (context, index) {

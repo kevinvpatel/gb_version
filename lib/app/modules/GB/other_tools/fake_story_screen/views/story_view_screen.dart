@@ -25,11 +25,11 @@ class StoryViewScreenView extends GetView<FakeStoryScreenController> {
         body: Container(
           height: height,
           width: width,
-          margin: EdgeInsets.symmetric(horizontal: 5),
+          margin: const EdgeInsets.symmetric(horizontal: 5),
           child: Stack(
             children: [
               controller.imageBackground != null
-                  ? Container(
+                  ? SizedBox(
                       height: height,
                       width: width,
                       child: Image.file(controller.imageBackground!, fit: BoxFit.fitWidth)
@@ -76,14 +76,14 @@ class StoryViewScreenView extends GetView<FakeStoryScreenController> {
                           Text(controller.txtLastSeen.text, style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w300, color: Colors.white),)
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       IconButton(
                         icon: Icon(CupertinoIcons.ellipsis_vertical, color: Colors.white, size: 18.sp),
                         onPressed: (){},
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   controller.txtCaption.text.isNotEmpty ? Container(
                     color: Colors.black54,
                     width: width,
@@ -97,15 +97,12 @@ class StoryViewScreenView extends GetView<FakeStoryScreenController> {
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Container(
-          // color: Colors.blue,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.keyboard_arrow_up_outlined, color: Colors.white, size: 18.sp),
-              Text('Reply', style: TextStyle(color: Colors.white, height: 0, fontSize: 16.sp),)
-            ],
-          ),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.keyboard_arrow_up_outlined, color: Colors.white, size: 18.sp),
+            Text('Reply', style: TextStyle(color: Colors.white, height: 0, fontSize: 16.sp),)
+          ],
         ),
       ),
     );
